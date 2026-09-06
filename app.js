@@ -179,3 +179,17 @@ function procesarCarrito(menu) {
         totalFijo: totalFijo
     };
 }
+
+window.onload = function() {
+    const resultado = procesarCarrito(menuPrincipal);
+    
+    
+    console.log("--- RESULTADO FINAL DE TU COMPRA ---", resultado);
+
+    
+    alert("--- RESUMEN DE COMPRA ---\n" +
+          "Subtotal: S/ " + resultado.subtotal.toFixed(2) + "\n" +
+          "IGV (18%): S/ " + resultado.igv.toFixed(2) + "\n" +
+          "Descuento: S/ " + resultado.descuento.toFixed(2) + "\n" +
+          "TOTAL A PAGAR: S/ " + resultado.totalFijo.toFixed(2));
+};
